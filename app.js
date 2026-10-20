@@ -24,7 +24,7 @@
       battery: '48 Hours (Fast Charge: 15m = 6 hrs playback)',
       latency: '12ms Ultra-Low Latency Dual-Stream',
       weight: '248g Titanium Alloy & Memory Foam',
-      assetPayload: '3.4 KB (Vector SVG, Lossless compression)',
+      assetPayload: '14.0 KB (Optimized Studio Photography, 85% Quality)',
       lcpImpact: 'Sub-threshold background resource',
       description: 'Engineered for audiophiles and audio engineers demanding studio-grade accuracy with zero wire latency and adaptive multi-microphone ANC.'
     },
@@ -36,7 +36,7 @@
       battery: '7 Days continuous bio-telemetry tracking',
       latency: 'Continuous 100Hz Sensor Sampling Rate',
       weight: '42g Aerospace Grade 5 Titanium',
-      assetPayload: '4.1 KB (Optimized Vector with explicit dimensions)',
+      assetPayload: '14.3 KB (Optimized Studio Photography, 85% Quality)',
       lcpImpact: 'Deferred layout box with strict 400x300 aspect ratio',
       description: 'Medical-grade cardiovascular analytics housed in a featherweight sapphire-crystal chassis with custom always-on Micro-LED display.'
     },
@@ -48,7 +48,7 @@
       battery: '36 Hours total with wireless Qi charging case',
       latency: '5ms Gaming Mode Synchronization',
       weight: '4.2g per earbud (IP68 Water & Dust Resistant)',
-      assetPayload: '3.8 KB (Vector SVG, pre-allocated layout)',
+      assetPayload: '22.2 KB (Optimized Macro Product Shoot, 85% Quality)',
       lcpImpact: 'Native loading="lazy" decoding="async"',
       description: 'Ultra-compact high-fidelity in-ear monitors equipped with spatial acoustic tracking and beamforming triple-microphone arrays.'
     },
@@ -60,7 +60,7 @@
       battery: '6 Hours continuous holographic computing',
       latency: 'Sub-3ms Motion-to-Photon Tracking',
       weight: '76g Magnesium-Aluminium Composite Frame',
-      assetPayload: '4.8 KB (Clean SVG vector geometry)',
+      assetPayload: '14.4 KB (Optimized Studio Photography, 85% Quality)',
       lcpImpact: 'Native loading="lazy" with zero CLS',
       description: 'Next-generation optical see-through smart eyewear delivering 70-degree field of view augmented overlays powered by on-device edge NPU.'
     }
