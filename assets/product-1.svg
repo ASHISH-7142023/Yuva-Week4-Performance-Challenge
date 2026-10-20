@@ -1,0 +1,10 @@
+<svg width="400" height="300" viewBox="0 0 400 300" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="400" height="300" rx="16" fill="#1e293b"/>
+  <circle cx="200" cy="150" r="100" fill="#6366f1" fill-opacity="0.15"/>
+  <path d="M 130 160 C 130 90, 270 90, 270 160" stroke="#6366f1" stroke-width="14" stroke-linecap="round" fill="none"/>
+  <rect x="110" y="140" width="40" height="70" rx="20" fill="#0f172a" stroke="#06b6d4" stroke-width="2"/>
+  <rect x="250" y="140" width="40" height="70" rx="20" fill="#0f172a" stroke="#06b6d4" stroke-width="2"/>
+  <circle cx="130" cy="175" r="10" fill="#6366f1"/>
+  <circle cx="270" cy="175" r="10" fill="#6366f1"/>
+  <text x="200" y="260" text-anchor="middle" fill="#94a3b8" font-family="Inter, sans-serif" font-size="13" font-weight="600">Aura One ANC Headset</text>
+</svg>

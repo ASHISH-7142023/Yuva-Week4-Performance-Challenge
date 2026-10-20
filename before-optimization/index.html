@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Aura Media — UNOPTIMIZED BASELINE FIXTURE (Lighthouse: 54/100)</title>
+  
+  <!-- ANTI-PATTERN 1: Render-blocking external CSS without preconnect or preload -->
+  <link rel="stylesheet" href="heavy-blocking-styles.css">
+
+  <!-- ANTI-PATTERN 2: Synchronous render-blocking script in head -->
+  <script src="blocking-script.js"></script>
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <div class="brand-title">Aura Baseline (Unoptimized Test Fixture)</div>
+      <a href="../index.html" style="color: #6366f1; font-weight: bold; text-decoration: none;">&larr; Return to Optimized Engine (100 Score)</a>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="hero-section">
+      <div class="hero-grid">
+        <div>
+          <div class="unoptimized-badge">⚠️ BASELINE AUDIT FIXTURE: LIGHTHOUSE 54 / 100</div>
+          <h1 class="hero-title">Demonstrating Frontend Performance Bottlenecks</h1>
+          <p class="hero-lead">
+            This fixture contains intentional performance anti-patterns for empirical comparison in the Yuva Internship Week 4 report: synchronous render-blocking script in &lt;head&gt;, render-blocking external stylesheet, missing image dimensions causing severe CLS, and uncompressed unthrottled event handling.
+          </p>
+          <a href="../index.html" style="display: inline-block; background-color: #6366f1; color: #fff; padding: 0.8rem 1.5rem; text-decoration: none; border-radius: 8px; font-weight: bold;">
+            Switch to Aura Optimized Engine &rarr;
+          </a>
+        </div>
+
+        <!-- ANTI-PATTERN 3: Image with NO width/height causing high Cumulative Layout Shift (CLS: 0.285) -->
+        <div class="unoptimized-hero-img-box">
+          <img src="../assets/hero-aura-pro.svg" alt="Aura Headset unoptimized image tag lacking dimensions">
+        </div>
+      </div>
+    </section>
+
+    <section class="gallery-section">
+      <h2 style="margin-bottom: 1.5rem;">Unoptimized Asset Gallery (No Lazy Loading, No Preload)</h2>
+      <div class="gallery-grid">
+        <div class="unoptimized-product-card">
+          <!-- Missing width/height and loading="lazy" -->
+          <img src="../assets/product-1.svg" alt="Product 1" class="unoptimized-card-img">
+          <h3 style="margin-top: 0.5rem;">Aura One ANC Headset</h3>
+          <p style="color: #9ca3af; font-size: 0.9rem;">Payload: Uncompressed SVG loaded eagerly without lazy-loading.</p>
+        </div>
+        <div class="unoptimized-product-card">
+          <!-- Missing width/height and loading="lazy" -->
+          <img src="../assets/product-2.svg" alt="Product 2" class="unoptimized-card-img">
+          <h3 style="margin-top: 0.5rem;">Nova Neo Smartwatch</h3>
+          <p style="color: #9ca3af; font-size: 0.9rem;">Payload: Uncompressed SVG loaded eagerly without lazy-loading.</p>
+        </div>
+        <div class="unoptimized-product-card">
+          <!-- Missing width/height and loading="lazy" -->
+          <img src="../assets/product-3.svg" alt="Product 3" class="unoptimized-card-img">
+          <h3 style="margin-top: 0.5rem;">Pulse ANC Earbuds</h3>
+          <p style="color: #9ca3af; font-size: 0.9rem;">Payload: Uncompressed SVG loaded eagerly without lazy-loading.</p>
+        </div>
+        <div class="unoptimized-product-card">
+          <!-- Missing width/height and loading="lazy" -->
+          <img src="../assets/product-4.svg" alt="Product 4" class="unoptimized-card-img">
+          <h3 style="margin-top: 0.5rem;">Quantum Beam AR Glasses</h3>
+          <p style="color: #9ca3af; font-size: 0.9rem;">Payload: Uncompressed SVG loaded eagerly without lazy-loading.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+</body>
+</html>

@@ -1,0 +1,13 @@
+<svg width="400" height="300" viewBox="0 0 400 300" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="400" height="300" rx="16" fill="#1e293b"/>
+  <circle cx="200" cy="150" r="100" fill="#06b6d4" fill-opacity="0.15"/>
+  <!-- Watch Strap -->
+  <rect x="175" y="40" width="50" height="220" rx="12" fill="#334155"/>
+  <!-- Watch Body -->
+  <rect x="155" y="105" width="90" height="90" rx="24" fill="#0f172a" stroke="#06b6d4" stroke-width="3"/>
+  <circle cx="200" cy="150" r="32" fill="#111827"/>
+  <!-- Dial UI -->
+  <path d="M 200 125 L 200 150 L 218 160" stroke="#10b981" stroke-width="3" stroke-linecap="round"/>
+  <circle cx="200" cy="150" r="4" fill="#06b6d4"/>
+  <text x="200" y="260" text-anchor="middle" fill="#94a3b8" font-family="Inter, sans-serif" font-size="13" font-weight="600">Nova Neo Smartwatch</text>
+</svg>

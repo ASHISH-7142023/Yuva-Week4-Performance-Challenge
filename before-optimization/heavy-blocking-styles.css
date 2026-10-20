@@ -1,0 +1,127 @@
+/* ==========================================================================
+   UNOPTIMIZED BASELINE: Heavy Synchronous Stylesheet (heavy-blocking-styles.css)
+   Contains unminified styling, missing layout dimensions, and render-blocking imports.
+   ========================================================================== */
+
+/* Synchronous web font import inside CSS (adds another network waterfall hop) */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
+
+:root {
+  --bg-dark: #0b0f19;
+  --bg-surface: #111827;
+  --text-main: #f9fafb;
+  --text-muted: #9ca3af;
+  --accent-indigo: #6366f1;
+  --accent-cyan: #06b6d4;
+  --accent-emerald: #10b981;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: var(--bg-dark);
+  color: var(--text-main);
+  font-family: 'Inter', sans-serif;
+  line-height: 1.6;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+.site-header {
+  position: sticky;
+  top: 0;
+  background-color: #0b0f19;
+  border-bottom: 1px solid #1f2937;
+  padding: 1rem 0;
+}
+
+.header-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.brand-title {
+  font-size: 1.3rem;
+  font-weight: 800;
+}
+
+.hero-section {
+  padding: 4rem 0;
+}
+
+.hero-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  align-items: center;
+}
+
+.hero-title {
+  font-size: 2.5rem;
+  font-weight: 800;
+  margin-bottom: 1rem;
+}
+
+.hero-lead {
+  color: var(--text-muted);
+  margin-bottom: 1.5rem;
+}
+
+/* ANTI-PATTERN: Container without aspect-ratio or explicit dimensions */
+.unoptimized-hero-img-box {
+  background-color: #1f2937;
+  border-radius: 12px;
+  overflow: hidden;
+  /* Missing aspect-ratio causes massive Cumulative Layout Shift (CLS: 0.285) */
+}
+
+.unoptimized-hero-img-box img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Gallery Section */
+.gallery-section {
+  padding: 3rem 0;
+  border-top: 1px solid #1f2937;
+}
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1.5rem;
+}
+
+.unoptimized-product-card {
+  background-color: #111827;
+  border: 1px solid #1f2937;
+  border-radius: 10px;
+  overflow: hidden;
+  padding: 1rem;
+}
+
+/* ANTI-PATTERN: Images lacking dimensions cause repeated layout recalculation */
+.unoptimized-card-img {
+  width: 100%;
+  height: auto;
+}
+
+.unoptimized-badge {
+  display: inline-block;
+  padding: 0.4rem 0.8rem;
+  background-color: #dc2626;
+  color: #fff;
+  border-radius: 4px;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
