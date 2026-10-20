@@ -18,7 +18,7 @@
   const PRODUCT_SPECS = {
     'Aura One ANC Wireless': {
       category: 'Spatial Audio',
-      price: '$349.00',
+      price: '₹28,999',
       rating: '★ 4.9 (420 reviews)',
       driver: '40mm Custom Planar Magnetic Neodymium',
       battery: '48 Hours (Fast Charge: 15m = 6 hrs playback)',
@@ -30,7 +30,7 @@
     },
     'Nova Neo Smartwatch': {
       category: 'Wearables',
-      price: '$429.00',
+      price: '₹35,499',
       rating: '★ 4.8 (310 reviews)',
       driver: 'Optical Multi-Frequency PPG & ECG Array',
       battery: '7 Days continuous bio-telemetry tracking',
@@ -42,7 +42,7 @@
     },
     'Pulse ANC Earbuds': {
       category: 'Spatial Audio',
-      price: '$199.00',
+      price: '₹16,499',
       rating: '★ 4.7 (280 reviews)',
       driver: '10mm Beryllium-coated Dynamic Transducers',
       battery: '36 Hours total with wireless Qi charging case',
@@ -54,7 +54,7 @@
     },
     'Quantum Beam AR Glasses': {
       category: 'AR Vision',
-      price: '$699.00',
+      price: '₹57,999',
       rating: '★ 5.0 (150 reviews)',
       driver: 'Dual 1080p Holographic Waveguide Projectors',
       battery: '6 Hours continuous holographic computing',
