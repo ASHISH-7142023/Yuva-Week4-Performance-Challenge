@@ -130,7 +130,27 @@ week-04-performance-challenge/
 
 ---
 
-## 💻 6. Running Locally
+## ⚡ 6. Engineering Challenges Encountered & Resolutions
+
+1. **Flash of Unstyled Content (FOUC) vs Critical Path Speed**:
+   - *Challenge*: Asynchronously deferring secondary stylesheets can cause visible layout flashing when classes pop into existence.
+   - *Resolution*: Extracted all foundational layout geometry and color tokens into an inlined `<style>` block (< 8KB) in `<head>` while using `<link rel="preload" as="style" onload="this.rel='stylesheet'">` with a progressive `<noscript>` fallback for secondary rules.
+
+2. **Eliminating Cumulative Layout Shift (CLS) Across Viewports**:
+   - *Challenge*: High-DPI responsive images cause content jumping and layout shifts during asynchronous network downloads.
+   - *Resolution*: Enforced dual-layer geometric reservation by specifying explicit intrinsic `width` and `height` attributes on `<img>` tags combined with CSS `aspect-ratio` container wrappers (`800 / 500` for Hero, `400 / 300` for Product Cards), pre-allocating layout space before image bytes arrive (CLS: 0.000).
+
+3. **High-Fidelity Commercial Photography vs Network Payload**:
+   - *Challenge*: Realistic studio photography can easily inflate transfer payloads to > 3 MB, violating mobile performance benchmarks.
+   - *Resolution*: Applied 85% bicubic compression to resample images to exact display coordinates, reducing all 5 studio-grade photography assets down to ~115 KB total with native `loading="lazy"` on secondary cards.
+
+4. **Scroll & Interaction Main-Thread Contention**:
+   - *Challenge*: Frequent DOM manipulation and scroll listeners cause layout thrashing and raise Total Blocking Time (TBT).
+   - *Resolution*: Throttled all DOM queries and mutations inside `window.requestAnimationFrame()` and used passive event listeners (`{ passive: true }`), ensuring a smooth 60 FPS experience with 0 ms TBT.
+
+---
+
+## 💻 7. Running Locally
 
 To inspect and test the application on your local machine:
 
@@ -157,10 +177,11 @@ To run a Google Lighthouse audit:
 
 ---
 
-## 🎓 7. Author Information
+## 🎓 8. Author Information
 
 - **Student Intern:** Ashish Ranjan Singh
 - **Internship Program:** Yuva Intern — Junior Frontend Developer Internship
 - **Term:** 07-Jul-2026 to 11-Aug-2026
 - **Deliverable:** Week 4 Performance Optimization Challenge
 - **GitHub:** [@ASHISH-7142023](https://github.com/ASHISH-7142023)
+
